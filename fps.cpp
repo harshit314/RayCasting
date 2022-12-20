@@ -275,7 +275,7 @@ public:
 
 int main()
 {
-    RenderWindow w(VideoMode(800,600),"raytrace");
+    RenderWindow w(VideoMode(windowSize.x, windowSize.y),"raytrace");
     RenderTexture buffer;
     buffer.create(windowSize.x,windowSize.y);
     Sprite canvas;
@@ -311,7 +311,7 @@ int main()
     gun.setTexture(gunTex);
     gun.setTextureRect(sf::IntRect((int)(3.f*gunSize.x/4.f),0,(int)(gunSize.x/4.f),gunSize.y));
     drawMap();
-    Player p1(Vector2f(100.f,100.f));
+    Player p1(Vector2f(2.f*boxSize.x, 2.f*boxSize.y));
     bool processMoves=false,menuToggle=false,shoot=false,reload=false;
     int moveForward=0,moveSide=0,rotateView=0,shootIndex=0,reloadIndex=0,actionTime=0;
     
